@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bebin V – Data Analyst & AI/Data Science Graduate. Explore projects, skills, and experience in data analysis, machine learning, and AI." />
+  <meta name="keywords" content="Bebin V, Data Analyst, AI, Data Science, Machine Learning, Python, Portfolio" />
+  <meta name="author" content="Bebin V" />
+  <meta name="robots" content="index, follow" />
+  <title>Bebin V | Data Analyst & AI Graduate</title>
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bebin-dot.github.io/" />
+  <meta property="og:title"       content="Bebin V | Data Analyst & AI Graduate" />
+  <meta property="og:description" content="Passionate about turning data into actionable insights. Explore my projects and skills." />
+  <meta property="og:image"       content="hero_bg.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Bebin V | Data Analyst & AI Graduate" />
+  <meta name="twitter:description" content="Passionate about turning data into actionable insights." />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bebin V",
+    "jobTitle": "Data Analyst",
+    "email": "bebinbebi46@gmail.com",
+    "telephone": "+919585392533",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kanyakumari",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "url": "https://github.com/bebin-dot",
+    "sameAs": [
+      "https://github.com/bebin-dot",
+      "https://www.linkedin.com/in/bebin-v-639674307"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loader" class="loader" role="status" aria-label="Loading">
+    <div class="loader__ring"></div>
+    <div class="loader__ring loader__ring--2"></div>
+    <div class="loader__ring loader__ring--3"></div>
+    <p class="loader__text">Initializing<span class="loader__dots"></span></p>
+  </div>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div id="cursor-dot"   class="cursor-dot"   aria-hidden="true"></div>
+  <div id="cursor-ring"  class="cursor-ring"  aria-hidden="true"></div>
+
+  <!-- ============================================================
+       SCROLL PROGRESS BAR
+  ============================================================ -->
+  <div id="scroll-progress" class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="Bebin V – Home">
+        <span class="navbar__logo-bracket">&lt;</span>
+        <span class="navbar__logo-name">Bebin V</span>
+        <span class="navbar__logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="navbar__links" aria-label="Primary navigation">
+        <a href="#about"      class="navbar__link" data-section="about">About</a>
+        <a href="#education"  class="navbar__link" data-section="education">Education</a>
+        <a href="#experience" class="navbar__link" data-section="experience">Experience</a>
+        <a href="#skills"     class="navbar__link" data-section="skills">Skills</a>
+        <a href="#projects"   class="navbar__link" data-section="projects">Projects</a>
+        <a href="#contact"    class="navbar__link" data-section="contact">Contact</a>
+      </nav>
+
+      <!-- Controls -->
+      <div class="navbar__controls">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#about"      class="mobile-menu__link" tabindex="-1">About</a>
+      <a href="#education"  class="mobile-menu__link" tabindex="-1">Education</a>
+      <a href="#experience" class="mobile-menu__link" tabindex="-1">Experience</a>
+      <a href="#skills"     class="mobile-menu__link" tabindex="-1">Skills</a>
+      <a href="#projects"   class="mobile-menu__link" tabindex="-1">Projects</a>
+      <a href="#contact"    class="mobile-menu__link" tabindex="-1">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section id="hero" class="hero" aria-label="Hero">
+      <!-- Particle Canvas -->
+      <canvas id="particle-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <!-- Background Image -->
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <!-- Floating Blobs -->
+      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--3" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal-up">
+          <span class="hero__badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+
+        <h1 class="hero__name reveal-up">
+          Hi, I'm <span class="gradient-text">Bebin V</span>
+        </h1>
+
+        <p class="hero__tagline reveal-up">
+          <span class="hero__static">I'm a </span>
+          <span id="typewriter" class="hero__typewriter"></span>
+          <span class="hero__cursor" aria-hidden="true">|</span>
+        </p>
+
+        <p class="hero__description reveal-up">
+          Passionate about transforming raw data into meaningful insights.<br />
+          Bridging the gap between data and decision-making.
+        </p>
+
+        <div class="hero__actions reveal-up">
+          <a href="#projects" class="btn btn--primary" id="view-work-btn">
+            <span>View My Work</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn btn--outline" id="contact-btn">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="hero__social reveal-up" aria-label="Social links">
+          <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:bebinbebi46@gmail.com" class="social-pill" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Hint -->
+      <a href="#about" class="hero__scroll-hint" aria-label="Scroll to About section">
+        <div class="hero__scroll-mouse">
+          <div class="hero__scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         STATS SECTION
+    ============================================================ -->
+    <section id="stats" class="stats section-gap" aria-label="Statistics">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat-card glass reveal-up" id="stat-projects">
+            <div class="stat-card__number" data-target="2">0</div>
+            <div class="stat-card__label">Projects Completed</div>
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+          </div>
+          <div class="stat-card glass reveal-up" id="stat-intern">
+            <div class="stat-card__number stat-card__text">Intern</div>
+            <div class="stat-card__label">Data Science Internship</div>
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+          </div>
+          <div class="stat-card glass reveal-up" id="stat-cgpa">
+            <div class="stat-card__number" data-target="75" data-decimal="true">0</div>
+            <div class="stat-card__label">CGPA / 10</div>
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+          </div>
+          <div class="stat-card glass reveal-up" id="stat-skills">
+            <div class="stat-card__number" data-target="14">0</div>
+            <div class="stat-card__label">Skills &amp; Technologies</div>
+            <div class="stat-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+    ============================================================ -->
+    <section id="about" class="about section-gap" aria-label="About me">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Get to know me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="about__grid">
+          <!-- Avatar Column -->
+          <div class="about__avatar-col reveal-left">
+            <div class="about__avatar-wrap">
+              <div class="about__avatar-ring" aria-hidden="true"></div>
+              <div class="about__avatar-ring about__avatar-ring--2" aria-hidden="true"></div>
+              <div class="about__avatar" aria-label="Bebin V avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+              </div>
+              <div class="about__avatar-dots" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="about__info-pills">
+              <a href="https://www.linkedin.com/in/bebin-v-639674307" target="_blank" rel="noopener noreferrer" class="info-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                LinkedIn Profile
+              </a>
+              <div class="info-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                Data Science Intern
+              </div>
+              <div class="info-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                B.Tech AI &amp; DS
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="about__text-col reveal-right">
+            <p class="about__lead">
+              Passionate about <span class="highlight">analyzing data</span> to uncover insights and support <span class="highlight">data-driven decisions</span>.
+            </p>
+            <p class="about__body">
+              As a graduate in Artificial Intelligence and Data Science, I continuously sharpen my analytical and technical skills. I enjoy transforming complex datasets into clear, meaningful visualizations that tell a compelling story.
+            </p>
+
+            <div class="about__expertise">
+              <h3 class="about__expertise-title">Core Expertise</h3>
+              <div class="expertise-grid">
+                <div class="expertise-item">
+                  <div class="expertise-item__icon" aria-hidden="true">🧹</div>
+                  <span>Data Cleaning</span>
+                </div>
+                <div class="expertise-item">
+                  <div class="expertise-item__icon" aria-hidden="true">🔍</div>
+                  <span>Exploratory Analysis</span>
+                </div>
+                <div class="expertise-item">
+                  <div class="expertise-item__icon" aria-hidden="true">📊</div>
+                  <span>Dashboard Development</span>
+                </div>
+                <div class="expertise-item">
+                  <div class="expertise-item__icon" aria-hidden="true">📈</div>
+                  <span>Data Visualization</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__cta">
+              <a href="mailto:bebinbebi46@gmail.com" class="btn btn--primary" id="hire-me-btn">
+                <span>Hire Me</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="btn btn--ghost" id="github-about-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION SECTION
+    ============================================================ -->
+    <section id="education" class="education section-gap" aria-label="Education">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Academic background</span>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item reveal-up">
+            <div class="timeline__dot" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <div class="timeline__card glass">
+              <div class="timeline__card-header">
+                <div>
+                  <span class="timeline__tag">2022 – 2026</span>
+                  <h3 class="timeline__institution">St. Xavier's Catholic College of Engineering</h3>
+                </div>
+                <div class="timeline__cgpa" aria-label="CGPA 7.5 out of 10">
+                  <span class="timeline__cgpa-value">7.5</span>
+                  <span class="timeline__cgpa-label">CGPA</span>
+                </div>
+              </div>
+              <p class="timeline__degree">B.Tech in Artificial Intelligence and Data Science</p>
+              <div class="timeline__tags">
+                <span class="tag">AI</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">B.Tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE SECTION
+    ============================================================ -->
+    <section id="experience" class="experience section-gap" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Professional journey</span>
+          <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item reveal-up">
+            <div class="timeline__dot" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <div class="timeline__card glass">
+              <div class="timeline__card-header">
+                <div>
+                  <span class="timeline__tag">2025</span>
+                  <h3 class="timeline__institution">Fortura Tech, Nagercoil</h3>
+                </div>
+                <span class="timeline__badge">Internship</span>
+              </div>
+              <p class="timeline__degree">Data Science Intern</p>
+              <ul class="timeline__list">
+                <li>Worked on data analysis using Python and data science tools</li>
+                <li>Performed comprehensive data cleaning on real-world datasets</li>
+                <li>Conducted exploratory data analysis (EDA) to extract insights</li>
+                <li>Created impactful visualizations and professional reports</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Python</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Data Cleaning</span>
+                <span class="tag">Visualization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS SECTION
+    ============================================================ -->
+    <section id="skills" class="skills section-gap" aria-label="Skills">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">What I work with</span>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="skills__grid">
+
+          <!-- Programming -->
+          <div class="skill-category glass reveal-up">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3>Programming</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar" data-skill="Python" data-value="88">
+                <div class="skill-bar__label">
+                  <span>Python</span><span class="skill-bar__pct">0%</span>
+                </div>
+                <div class="skill-bar__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88" aria-label="Python skill level">
+                  <div class="skill-bar__fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar" data-skill="SQL" data-value="80">
+                <div class="skill-bar__label">
+                  <span>SQL</span><span class="skill-bar__pct">0%</span>
+                </div>
+                <div class="skill-bar__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-label="SQL skill level">
+                  <div class="skill-bar__fill" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Libraries -->
+          <div class="skill-category glass reveal-up">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3>Libraries</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill skill-pill--filled">Pandas</span>
+              <span class="skill-pill skill-pill--filled">NumPy</span>
+              <span class="skill-pill skill-pill--filled">Matplotlib</span>
+              <span class="skill-pill skill-pill--filled">Seaborn</span>
+              <span class="skill-pill skill-pill--filled">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category glass reveal-up">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Excel</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Jupyter Notebook</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skill-category glass reveal-up">
+            <div class="skill-category__header">
+              <div class="skill-category__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3>Concepts</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill skill-pill--accent">Data Analysis</span>
+              <span class="skill-pill skill-pill--accent">Data Cleaning</span>
+              <span class="skill-pill skill-pill--accent">Data Visualization</span>
+              <span class="skill-pill skill-pill--accent">EDA</span>
+              <span class="skill-pill skill-pill--accent">Machine Learning</span>
+            </div>
+          </div>
+
+        </div><!-- /.skills__grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS SECTION
+    ============================================================ -->
+    <section id="projects" class="projects section-gap" aria-label="Projects">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">What I've built</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters reveal-up" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn filter-btn--active" data-filter="all" role="tab" aria-selected="true" id="filter-all">All</button>
+          <button class="filter-btn" data-filter="ml"   role="tab" aria-selected="false" id="filter-ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="ai"   role="tab" aria-selected="false" id="filter-ai">AI</button>
+          <button class="filter-btn" data-filter="nlp"  role="tab" aria-selected="false" id="filter-nlp">NLP</button>
+        </div>
+
+        <!-- Project Cards -->
+        <div class="projects__grid" id="projects-grid">
+
+          <!-- Project 1: SMS Spam Detection -->
+          <article class="project-card glass reveal-up" data-category="ml nlp" role="tabpanel" aria-label="SMS Spam Detection project">
+            <div class="project-card__img-wrap">
+              <img src="project_spam.png" alt="SMS Spam Detection project visualization" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay" aria-hidden="true">
+                <div class="project-card__overlay-content">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <span class="project-card__badge">ML</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">SMS Spam Detection</h3>
+              <p class="project-card__desc">
+                Built a machine learning model to classify SMS messages as spam or non-spam using text preprocessing, feature extraction, and a high-accuracy classification model.
+              </p>
+              <div class="project-card__features">
+                <span class="feature-chip">Text Preprocessing</span>
+                <span class="feature-chip">Tokenization</span>
+                <span class="feature-chip">Feature Extraction</span>
+                <span class="feature-chip">Classification</span>
+              </div>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Scikit-Learn</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" id="spam-github-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn--sm btn--outline" id="spam-demo-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AI Knowledge System -->
+          <article class="project-card glass reveal-up" data-category="ai nlp" role="tabpanel" aria-label="AI-Powered Knowledge Interactive System project">
+            <div class="project-card__img-wrap">
+              <img src="project_ai.png" alt="AI Knowledge Interactive System visualization" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay" aria-hidden="true">
+                <div class="project-card__overlay-content">
+                  <span>View Details</span>
+                </div>
+              </div>
+              <span class="project-card__badge project-card__badge--ai">AI</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">AI-Powered Knowledge Interactive System</h3>
+              <p class="project-card__desc">
+                Developed an AI-based system to retrieve and present information from a knowledge base using NLP query processing and intelligent information management.
+              </p>
+              <div class="project-card__features">
+                <span class="feature-chip">NLP Query Processing</span>
+                <span class="feature-chip">Info Retrieval</span>
+                <span class="feature-chip">Knowledge Mgmt</span>
+                <span class="feature-chip">Interactive UX</span>
+              </div>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Data Processing</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary" id="ai-github-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn btn--sm btn--outline" id="ai-demo-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.projects__grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+    ============================================================ -->
+    <section id="contact" class="contact section-gap" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Let's connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Info -->
+          <div class="contact__info reveal-left">
+            <a href="mailto:bebinbebi46@gmail.com" class="contact-card glass" id="email-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <p class="contact-card__label">Email</p>
+                <p class="contact-card__value">bebinbebi46@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+919585392533" class="contact-card glass" id="phone-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"></path></svg>
+              </div>
+              <div>
+                <p class="contact-card__label">Phone</p>
+                <p class="contact-card__value">+91 95853 92533</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="contact-card glass" id="github-contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </div>
+              <div>
+                <p class="contact-card__label">GitHub</p>
+                <p class="contact-card__value">bebin-dot</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/bebin-v-639674307" target="_blank" rel="noopener noreferrer" class="contact-card glass" id="linkedin-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div>
+                <p class="contact-card__label">LinkedIn</p>
+                <p class="contact-card__value">bebin-v-639674307</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" class="contact__form glass reveal-right" novalidate aria-label="Contact form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="form-name" class="form__label">Full Name</label>
+                <input type="text" id="form-name" name="name" class="form__input" placeholder="John Doe" required autocomplete="name" />
+                <span class="form__error" id="error-name" role="alert"></span>
+              </div>
+              <div class="form__group">
+                <label for="form-email" class="form__label">Email Address</label>
+                <input type="email" id="form-email" name="email" class="form__input" placeholder="john@example.com" required autocomplete="email" />
+                <span class="form__error" id="error-email" role="alert"></span>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="form-subject" class="form__label">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form__input" placeholder="How can I help you?" required />
+              <span class="form__error" id="error-subject" role="alert"></span>
+            </div>
+            <div class="form__group">
+              <label for="form-message" class="form__label">Message</label>
+              <textarea id="form-message" name="message" class="form__input form__textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+              <span class="form__error" id="error-message" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="form-submit-btn">
+              <span id="btn-text">Send Message</span>
+              <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+            <div id="form-success" class="form__success" role="status" aria-live="polite" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo" aria-label="Bebin V – Back to top">
+          <span class="navbar__logo-bracket">&lt;</span>
+          <span class="navbar__logo-name">Bebin V</span>
+          <span class="navbar__logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer__tagline">Data Analyst | AI &amp; Data Science Graduate</p>
+      </div>
+
+      <div class="footer__social" aria-label="Footer social links">
+        <a href="https://github.com/bebin-dot" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/bebin-v-639674307" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:bebinbebi46@gmail.com" class="footer__social-link" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Bebin V. Crafted with <span class="footer__heart" aria-label="love">♥</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
